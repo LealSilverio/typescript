@@ -35,6 +35,9 @@ var draw = function (event) {
         ctx.stroke();
         ctx.moveTo(x, y);
     }
+    if (eraserMode) {
+        erase(x, y);
+    }
     else {
         ctx.lineTo(x, y);
         ctx.stroke();
@@ -46,6 +49,15 @@ function toggleMirror(event) {
     var checkbox = event.target;
     mirror = checkbox.checked;
 }
+function erase(x, y) {
+    if (!ctx) {
+        throw new Error('Failed to get element');
+    }
+    ctx.clearRect(x - 5, y - 5, 10, 10);
+}
+function toggleEraser() {
+    eraserMode = !eraserMode;
+}
 function clearCanvas() {
     if (!ctx || !canvas) {
         throw new Error('Failed to get element');
@@ -53,9 +65,6 @@ function clearCanvas() {
     else {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
-}
-function toggleEraser() {
-    eraserMode = !eraserMode;
 }
 // Event listeners
 canvas.addEventListener('mousedown', startDrawing);
@@ -68,3 +77,26 @@ var clearButton = document.getElementById('clearButton');
 clearButton.addEventListener('click', clearCanvas);
 var eraserButton = document.getElementById('eraserButton');
 eraserButton.addEventListener('click', toggleEraser);
+// Other Requirements
+// Recursion function example: Factorial
+function factorial(n) {
+    if (n <= 1) {
+        return 1;
+    }
+    else {
+        return n * factorial(n - 1);
+    }
+}
+// Lists example
+var myList = [1, 2, 3, 4, 5];
+// Asynchronous function example: Simulating a delay with setTimeout
+function simulateAsyncOperation() {
+    return new Promise(function (resolve) {
+        setTimeout(function () {
+            resolve();
+        }, 2000); // 2 seconds delay
+    });
+}
+console.log("Factorial example ", factorial(20));
+console.log("List example ", myList);
+console.log("Async example", simulateAsyncOperation);
