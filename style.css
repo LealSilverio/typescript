@@ -6,9 +6,30 @@ body {
     margin: 0;
     background-color: #062124;
 }
-
 canvas {
     background-color: #dfe8e8;
     border: 2px solid #0b2b2e;
     border-radius: 10px;
+}
+section {
+    display: flex;
+    flex-direction: column;
+}
+section div, section button {
+    margin: 10px 20px;
+}
+section div {
+    align-items: center;
+}
+label, button {
+    color: #dfe8e8;
+    font-size: 1.2em;
+}
+button {
+    background-color: #164549;
+    border: 2px solid #164549;
+    border-radius: 10px;
+}
+button:hover {
+    background-color: #235d63;
 }
