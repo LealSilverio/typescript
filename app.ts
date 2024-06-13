@@ -11,9 +11,9 @@ if (!ctx) {
     throw new Error('Failed to get 2D context');
 }
 
-let drawing = false;
-let mirror = false;
-let eraserMode = false;
+let drawing: boolean = false;
+let mirror: boolean = false;
+let eraserMode: boolean = false;
 
 const startDrawing = (event: MouseEvent) => {
     drawing = true;
@@ -32,11 +32,11 @@ const draw = (event: MouseEvent) => {
     ctx.lineCap = 'round';
     ctx.strokeStyle = 'black';
 
-    const x = event.clientX - canvas.offsetLeft;
-    const y = event.clientY - canvas.offsetTop;
+    const x: number = event.clientX - canvas.offsetLeft;
+    const y: number = event.clientY - canvas.offsetTop;
 
     if (mirror) {
-        const mirrorX = canvas.width - x;
+        const mirrorX: number = canvas.width - x;
         ctx.lineTo(mirrorX, y);
         ctx.stroke();
         ctx.moveTo(x, y);
@@ -108,7 +108,8 @@ const myList: number[] = [1, 2, 3, 4, 5];
 function simulateAsyncOperation() {
     return new Promise<void>((resolve) => {
         setTimeout(() => {
-            resolve();
+            resolve(),
+            console.log("function working");
         }, 2000); // 2 seconds delay
     });
 }
