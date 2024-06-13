@@ -1,52 +1,26 @@
 # Overview
 
-### Project and Learning Goals 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This is a simple drawing app where you can create and erase any drawing. There's also a feature to mirror the "pencil" so you can create symmetrical shapes and one to clear the board. The purpose of this software is to test my skills and new found knowledge in Typescript. For that reason, I also added some extra functions that you can find in the console of the browser to test how to make async functions, recursion, and lists using typescript.
 
-### Software Description 
-{Provide a description of the software that you wrote to demonstrate the TypeScript language.}
-
-### Software Purpose
-{Describe your purpose for writing this software.}
-
-### YouTube demonstration.
+## YouTube demonstration.
 
 <!-- 4-5 min demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax. -->
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/deCihb7rbmk)
 
-# Development Environment
+## Development Environment
 
 ### Tools used and Programming Languages 
-{Describe the tools that you used to develop the software}
+I used node for the server, typescript for the programming language, and the Canvas API
 
-{Describe the programming language that you used and any libraries.}
+## Useful Websites
 
-# Useful Websites
+- [MDN Web Docs - Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+- [YouTube - TypeScript Tutorial for Beginners](https://www.youtube.com/watch?v=d56mG7DezGs)
 
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+## Future Work
 
-# Future Work
+Some things I want to fix, improve, or add in the future:
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
-
-
-------------------------------
-# Requirements
-
-- Display output to the terminal.
-- Recursion
-- Classes
-- Lists
-- Asynchronous Functions
-
-
-# Stretch Challenges (select one)
-
-- Demonstrate throwing and handling exceptions
-- Use TS Lint
-- Incorporate Jest in your project
+- I want to make so I can change the color of the "pencil"
+- I want to fix the mirror feature so instead of filled shapes, the outline is the only thing drawn
+- I want to improve the design with a proper 'tools' bar with all the options of what you can do 
